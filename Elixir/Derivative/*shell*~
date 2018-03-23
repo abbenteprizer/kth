@@ -1,0 +1,45 @@
+albert@albert-U35JC:~/Documents/Elixir/Derivative$ iex
+Interactive Elixir (1.6.1) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> c"derivative.ex"
+[Derivative]
+iex(2)> Derivative.test
+** (FunctionClauseError) no function clause matching in
+    Derivative.deriv/2 The following arguments were given to
+    Derivative.deriv/2:
+        # 1
+        {:exp, {{:var, :x}, {:const, 2}}}
+    
+        # 2
+        :x
+    
+    derivative.ex:18: Derivative.deriv/2
+    derivative.ex:25: Derivative.deriv/2
+    derivative.ex:25: Derivative.deriv/2
+    derivative.ex:22: Derivative.deriv/2
+iex(2)> 
+** (SyntaxError) iex:2: syntax error before: '>'
+
+iex(2)> c"derivative.ex"
+warning: redefining module Derivative (current version defined in memory)
+  derivative.ex:1
+
+warning: the result of the expression is ignored (suppress the warning by assigning the expression to the _ variable)
+  derivative.ex:27
+
+[Derivative]
+iex(3)> Derivative.test()
+** (FunctionClauseError) no function clause matching in Derivative.deriv/2    
+    
+    The following arguments were given to Derivative.deriv/2:
+    
+        # 1
+        {:exp, {{:var, :x}, {:const, 2}}}
+    
+        # 2
+        :x
+    
+    derivative.ex:17: Derivative.deriv/2
+    derivative.ex:24: Derivative.deriv/2
+    derivative.ex:24: Derivative.deriv/2
+    derivative.ex:21: Derivative.deriv/2
+iex(3)> 
